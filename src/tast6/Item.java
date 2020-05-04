@@ -12,6 +12,14 @@ public class Item {
         this.weight = weight;
     }
 
+    public int getCost() {
+        return cost;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
     @Override
     public String toString() {
         return "itemName='" + itemName + '\'' +

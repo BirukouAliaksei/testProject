@@ -19,7 +19,7 @@ public class NumbersChecker {
     }
 
     int countLeastCommonMultiple(int firstNumber, int secondNumber) {
-        if (secondNumber == 0){
+        if (secondNumber == 0) {
             return firstNumber;
         }
         return (firstNumber*secondNumber)/countGreatestCommonDivisor(firstNumber, secondNumber);

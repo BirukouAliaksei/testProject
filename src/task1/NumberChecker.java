@@ -44,7 +44,7 @@ public class NumberChecker {
         checkEvenOrUnevenNumber(number);
         checkPrimeOrCompoundNumber(number);
     }
-// вводим число несколько раз число, пока не будет введено правильно
+// enter the number several times the number until it is entered correctly
     private int inputNumber() {
         System.out.println("Input the number");
         int number;
