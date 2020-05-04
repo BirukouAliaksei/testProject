@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 public class WordsCount {
 
-    public void counterWordInText(String text, String word){
+    private void countWordInText(String text, String word) {
         int counter = 0;
-        ArrayList<String> textList = new ArrayList<>();
-        for (String e : text.split(" ")){
-            textList.add(e);
+        String[] textList = text.split(" ");
+
+        for (String e : textList){
             if (e.equalsIgnoreCase(word)){
                 counter++;
             }
@@ -20,6 +20,7 @@ public class WordsCount {
         WordsCount main = new WordsCount();
         String text = "Selenium is a suite of tools web for automating web browsers";
         String word = "web";
-        main.counterWordInText(text, word);
+        main.countWordInText(text, word);
     }
 }
+// сдкелать из командной строки

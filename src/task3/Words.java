@@ -14,17 +14,17 @@ public class Words {
         }
     };
 
-    private void wordCounter(ArrayList<String> textList){
+    private void countWords(ArrayList<String> textList) {
         System.out.println("number of words in sentences: " + textList.size());
-
     }
 
-    private void sortCollection(ArrayList<String> textList){
+    private void sortCollection(ArrayList<String> textList) {
         textList.sort(LINE_LENGHT);
+//        Collections.sort(textList); //you can use standards Collection method. Alphabet sort.
         System.out.println("Sorted Collection" + textList + " ");
     }
 
-    private void changeCollectionToUpperCase(ArrayList<String> textList){
+    private void printCollectionInUpperCase(ArrayList<String> textList) {
         for (String e : textList){
             System.out.print(e.substring(0,1).toUpperCase() + e.substring(1) + " ");
         }
@@ -34,8 +34,8 @@ public class Words {
         Words words = new Words();
         String text = "Selenium is a suite of tools for automating web browsers";
         ArrayList<String> textList = new ArrayList<>(Arrays.asList(text.split(" ")));
-        words.wordCounter(textList);
+        words.countWords(textList);
         words.sortCollection(textList);
-        words.changeCollectionToUpperCase(textList);
+        words.printCollectionInUpperCase(textList);
     }
 }

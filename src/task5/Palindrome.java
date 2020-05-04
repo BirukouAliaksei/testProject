@@ -4,16 +4,15 @@ import java.util.Scanner;
 
 public class Palindrome {
 
-    private void checkPolindomeNumbers(int n){
-
+    private void checkPolindomeNumbers(int n) {
         for (int i = 0; i <= n;i++) {
-            int lastDigit,sum=0,a;
+            int lastDigit,sum=0,balance;
             int inputNumber = i;
-            a = inputNumber;
-            while (a > 0) {
-                lastDigit = a % 10;
+            balance = inputNumber;
+            while (balance > 0) {
+                lastDigit = balance % 10;
                 sum = (sum * 10) + lastDigit;
-                a = a / 10;
+                balance = balance / 10;
             }
             if (sum == inputNumber)
                 System.out.println("Number "+ i +" is palindrome ");
@@ -23,7 +22,5 @@ public class Palindrome {
     public static void main(String[] args){
         Palindrome palindrome = new Palindrome();
         palindrome.checkPolindomeNumbers(55);
-
     }
 }
-

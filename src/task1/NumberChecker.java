@@ -1,31 +1,27 @@
 package task1;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Main {
-    static Scanner scanner = new Scanner(System.in);
+public class NumberChecker {
+    private static Scanner scanner = new Scanner(System.in);
 
-    private void checkWholeorNotwholeNumber(int number) {
-
-        if (number % 1 == 0) {
-            System.out.println(number + " whole number");
-        }
+    private void printNumber(int number) {
+            System.out.println(number + " integer");
     }
 
-    private void checkEvenOrUnevenNumber(int number) {
-
-        int i = 2;
+    boolean checkEvenOrUnevenNumber(int number) {
+        boolean results = false;
         if (number % 2 == 0) {
             System.out.println(number + " even number");
+            results = true;
         }
-        if (number % 2 != 0) {
+        else {
             System.out.println(number + " uneven number");
         }
+        return  results;
     }
 
-    private void checkSimpleOrCompoundNumber(int number) {
-
+    boolean checkPrimeOrCompoundNumber(int number) {
         int i;
         boolean isCompound = false;
 
@@ -38,36 +34,33 @@ public class Main {
         if (isCompound) {
             System.out.println(number + " composite number ");
         } else {
-            System.out.println(number + " simple number ");
+            System.out.println(number + " prime number ");
         }
+        return isCompound;
     }
 
     private void checkAllMethods(int number) {
-
-        checkWholeorNotwholeNumber(number);
+        printNumber(number);
         checkEvenOrUnevenNumber(number);
-        checkSimpleOrCompoundNumber(number);
+        checkPrimeOrCompoundNumber(number);
     }
-
-    private int inputNumber(){
-
+// вводим число несколько раз число, пока не будет введено правильно
+    private int inputNumber() {
         System.out.println("Input the number");
-
         int number;
-
             try {
                 number = Integer.parseInt(scanner.nextLine());
             } catch (NumberFormatException e) {
-                System.out.println("Error, input whole number");
+                System.out.println("Error, input integer");
                 number = inputNumber();
             }
         return number;
     }
 
     public static void main(String[] args) {
-
-        Main main = new Main();
-        int number = main.inputNumber();
-        main.checkAllMethods(number);
+        NumberChecker numberChecker = new NumberChecker();
+        int number = numberChecker.inputNumber();
+        numberChecker.checkAllMethods(number);
     }
 }
+

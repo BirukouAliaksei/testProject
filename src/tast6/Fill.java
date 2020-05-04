@@ -2,12 +2,12 @@ package tast6;
 
 import java.util.List;
 
-public class Solution {
+public class Fill {
 
     private List<Item> items;
     private int cost;
 
-    Solution(List<Item> items, int cost) {
+    Fill(List<Item> items, int cost) {
         this.items = items;
         this.cost = cost;
     }
