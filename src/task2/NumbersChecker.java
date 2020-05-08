@@ -22,7 +22,7 @@ public class NumbersChecker {
         if (secondNumber == 0) {
             return firstNumber;
         }
-        return (firstNumber*secondNumber)/countGreatestCommonDivisor(firstNumber, secondNumber);
+        return (firstNumber * secondNumber) / countGreatestCommonDivisor(firstNumber, secondNumber);
     }
 
     int countGreatestCommonDivisor(int firstNumber, int secondNumber) {
@@ -31,7 +31,7 @@ public class NumbersChecker {
         if (secondNumber == 0)
             return Math.abs(firstNumber);
         while (firstNumber != secondNumber) {
-            if(firstNumber > secondNumber)
+            if (firstNumber > secondNumber)
                 firstNumber = firstNumber - secondNumber;
             else
                 secondNumber = secondNumber - firstNumber;
@@ -43,7 +43,7 @@ public class NumbersChecker {
         NumbersChecker numbersChecker = new NumbersChecker();
         int firstNumber = numbersChecker.inputNumber();
         int secondNumber = numbersChecker.inputNumber();
-        System.out.println(numbersChecker.countGreatestCommonDivisor(firstNumber,secondNumber) + " Greatest Common Divisor");
-        System.out.println(numbersChecker.countLeastCommonMultiple(firstNumber,secondNumber) + " Last Common Multiple");
+        System.out.println(numbersChecker.countGreatestCommonDivisor(firstNumber, secondNumber) + " Greatest Common Divisor");
+        System.out.println(numbersChecker.countLeastCommonMultiple(firstNumber, secondNumber) + " Last Common Multiple");
     }
 }

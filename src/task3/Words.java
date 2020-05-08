@@ -1,11 +1,14 @@
 package task3;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Scanner;
 
 public class Words {
     Scanner scanner = new Scanner(System.in);
 
-    private static final Comparator<String> LINE_LENGHT = new Comparator<String>() {
+    private static final Comparator<String> LINE_LENGTH = new Comparator<String>() {
         @Override
         public int compare(String o1, String o2) {
             return o1.length() - o2.length();
@@ -18,14 +21,14 @@ public class Words {
     }
 
     private void sortCollection(ArrayList<String> textList) {
-        textList.sort(LINE_LENGHT);
+        textList.sort(LINE_LENGTH);
 //        Collections.sort(textList); //you can use standards Collection method. Alphabet sort.
         System.out.println("Sorted Collection " + textList + " ");
     }
 
     private void printCollectionInUpperCase(ArrayList<String> textList) {
         for (String e : textList) {
-            System.out.print(e.substring(0,1).toUpperCase() + e.substring(1) + " ");
+            System.out.print(e.substring(0, 1).toUpperCase() + e.substring(1) + " ");
         }
     }
 

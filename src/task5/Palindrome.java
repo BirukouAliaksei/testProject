@@ -7,7 +7,7 @@ public class Palindrome {
 
     private void checkPalindomeNumbers(int n) {
         for (int i = 0; i <= n; i++) {
-            int lastDigit, sum=0, balance;
+            int lastDigit, sum = 0, balance;
             int inputNumber = i;
             balance = inputNumber;
             while (balance > 0) {
@@ -16,9 +16,10 @@ public class Palindrome {
                 balance = balance / 10;
             }
             if (sum == inputNumber)
-                System.out.println("Number "+ i +" is palindrome ");
+                System.out.println("Number " + i + " is palindrome ");
         }
     }
+
     private int inputNumber() {
         System.out.println("Input the number from 0 to 100");
         int number;

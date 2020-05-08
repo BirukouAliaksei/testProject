@@ -1,6 +1,5 @@
 package task4;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class WordsCount {
@@ -9,12 +8,13 @@ public class WordsCount {
     int countWordInText(String text, String word) {
         int counter = 0;
         String[] textList = text.split(" ");
+
         for (String e : textList) {
             if (e.equalsIgnoreCase(word)) {
                 counter++;
             }
         }
-        System.out.println("Input text contain: "+counter+" Numbers words: "+word);
+        System.out.println("Input text contain: " + counter + " Numbers of word: " + word);
         return counter;
     }
 

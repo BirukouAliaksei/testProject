@@ -6,7 +6,7 @@ public class NumberChecker {
     private static Scanner scanner = new Scanner(System.in);
 
     private void printNumber(int number) {
-            System.out.println(number + " integer");
+        System.out.println(number + " integer");
     }
 
     boolean checkEvenOrUnevenNumber(int number) {
@@ -14,11 +14,10 @@ public class NumberChecker {
         if (number % 2 == 0) {
             System.out.println(number + " even number");
             results = true;
-        }
-        else {
+        } else {
             System.out.println(number + " uneven number");
         }
-        return  results;
+        return results;
     }
 
     boolean checkPrimeOrCompoundNumber(int number) {
@@ -44,16 +43,17 @@ public class NumberChecker {
         checkEvenOrUnevenNumber(number);
         checkPrimeOrCompoundNumber(number);
     }
-// enter the number several times the number until it is entered correctly
+
+    // enter the number several times the number until it is entered correctly
     private int inputNumber() {
         System.out.println("Input the number");
         int number;
-            try {
-                number = Integer.parseInt(scanner.nextLine());
-            } catch (NumberFormatException e) {
-                System.out.println("Error, input integer");
-                number = inputNumber();
-            }
+        try {
+            number = Integer.parseInt(scanner.nextLine());
+        } catch (NumberFormatException e) {
+            System.out.println("Error, input integer");
+            number = inputNumber();
+        }
         return number;
     }
 
